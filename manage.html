@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缴费管理</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container manage-container">
+        <h1>缴费管理</h1>
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="pending">待处理</button>
+            <button class="tab-btn" data-tab="completed">已完成</button>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="搜索车牌号...">
+            <select id="dateFilter">
+                <option value="all">所有时间</option>
+                <option value="today">今天</option>
+                <option value="week">本周</option>
+                <option value="month">本月</option>
+            </select>
+        </div>
+        <div id="submissions-list" class="submissions-list">
+            <!-- 提交记录将在这里动态显示 -->
+        </div>
+        <div class="pagination">
+            <button id="prevPage" disabled>上一页</button>
+            <span id="pageInfo">第 1 页</span>
+            <button id="nextPage">下一页</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='manage.js') }}"></script>
+</body>
+</html> 

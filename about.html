@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于系统</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+</head>
+<body class="page-container">
+    <div class="main-content">
+        <div class="container">
+            <h1>关于系统</h1>
+            <div class="about-content">
+                <div class="app-info">
+                    <i class="ri-parking-line app-icon"></i>
+                    <h2>停车缴费系统</h2>
+                    <p class="version">版本 1.0.0</p>
+                </div>
+                <div class="feature-list">
+                    <h3>主要功能</h3>
+                    <ul>
+                        <li>车牌号绑定</li>
+                        <li>微信消息推送</li>
+                        <li>缴费状态查询</li>
+                        <li>历史记录查看</li>
+                    </ul>
+                </div>
+                <div class="author-info">
+                    <h3>作者信息</h3>
+                    <div class="author-details">
+                        <p><i class="ri-user-line"></i> Achord666</p>
+                        <p><i class="ri-phone-line"></i> <a href="tel:13160235855">13160235855</a></p>
+                        <p><i class="ri-mail-line"></i> <a href="mailto:achordchan@gmail.com">achordchan@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="powered-by">
+                    <p>本系统由 Cursor 驱动</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="/" class="nav-item">
+            <i class="ri-home-5-line"></i>
+            <span>首页</span>
+        </a>
+        <a href="/history" class="nav-item">
+            <i class="ri-history-line"></i>
+            <span>历史</span>
+        </a>
+        <a href="/about" class="nav-item active">
+            <i class="ri-information-line"></i>
+            <span>关于</span>
+        </a>
+    </nav>
+</body>
+</html> 

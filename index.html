@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>停车缴费提交</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+</head>
+<body class="page-container">
+    <div class="main-content">
+        <div class="container">
+            <div class="header-icon">
+                <i class="ri-parking-line"></i>
+            </div>
+            <h1>停车缴费提交</h1>
+            <div class="welcome-text">
+                <p>欢迎使用智慧停车缴费系统</p>
+                <p class="sub-text">便捷支付，即刻通行</p>
+            </div>
+            
+            <div id="user-info" style="display: none;">
+                <div class="input-group">
+                    <label for="plateNumber">车牌号码</label>
+                    <input type="text" id="plateNumber" value="{{ plate_number }}">
+                    <button type="button" id="savePlateBtn" class="secondary-btn">
+                        <i class="ri-save-line"></i> 保存车牌
+                    </button>
+                </div>
+                <button type="submit" id="submitBtn">
+                    <i class="ri-send-plane-line"></i> 提交缴费
+                </button>
+                <div id="message" class="message"></div>
+                
+                <div class="user-status">
+                    <div class="divider">
+                        <span>绑定信息</span>
+                    </div>
+                    <div class="bind-info">
+                        <p><i class="ri-wechat-line"></i> 微信：<span id="user-uid"></span></p>
+                        <p><i class="ri-time-line"></i> 时间：<span id="bind-time"></span></p>
+                    </div>
+                    <button id="resetUserBtn" class="danger-btn">
+                        <i class="ri-refresh-line"></i> 重新绑定
+                    </button>
+                </div>
+            </div>
+            
+            <div id="qrcode-container" style="display: none;">
+                <div class="scan-tips">
+                    <i class="ri-qr-scan-line"></i>
+                    <p>请扫码关注公众号</p>
+                </div>
+                <div id="qrcode"></div>
+                <p class="message">扫码关注后自动完成绑定</p>
+            </div>
+        </div>
+    </div>
+    
+    <nav class="bottom-nav">
+        <a href="/" class="nav-item active">
+            <i class="ri-home-5-line"></i>
+            <span>首页</span>
+        </a>
+        <a href="/history" class="nav-item">
+            <i class="ri-history-line"></i>
+            <span>历史</span>
+        </a>
+        <a href="/about" class="nav-item">
+            <i class="ri-information-line"></i>
+            <span>关于</span>
+        </a>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html> 

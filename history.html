@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缴费历史</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+</head>
+<body class="page-container">
+    <div class="main-content">
+        <div class="container">
+            <h1>缴费历史</h1>
+            <div class="history-header">
+                <div class="history-stats">
+                    <div class="stat-item" data-filter="all">
+                        <i class="ri-list-check-2"></i>
+                        <span>全部</span>
+                        <strong id="totalCount">0</strong>
+                    </div>
+                    <div class="stat-item" data-filter="pending">
+                        <i class="ri-time-line"></i>
+                        <span>待处理</span>
+                        <strong id="pendingCount">0</strong>
+                    </div>
+                    <div class="stat-item" data-filter="completed">
+                        <i class="ri-check-line"></i>
+                        <span>已完成</span>
+                        <strong id="completedCount">0</strong>
+                    </div>
+                </div>
+            </div>
+            <div id="history-list" class="history-list">
+                <!-- 历史记录将在这里动态显示 -->
+            </div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="/" class="nav-item">
+            <i class="ri-home-5-line"></i>
+            <span>首页</span>
+        </a>
+        <a href="/history" class="nav-item active">
+            <i class="ri-history-line"></i>
+            <span>历史</span>
+        </a>
+        <a href="/about" class="nav-item">
+            <i class="ri-information-line"></i>
+            <span>关于</span>
+        </a>
+    </nav>
+
+    <script src="{{ url_for('static', filename='history.js') }}"></script>
+</body>
+</html> 

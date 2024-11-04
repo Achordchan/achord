@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设置管理员</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>管理员设置</h1>
+        <div id="admin-info" style="display: none;">
+            <p>当前管理员 UID: <span id="current-uid"></span></p>
+            <p>设置时间: <span id="created-at"></span></p>
+            <button id="resetBtn" class="danger-btn">重置管理员</button>
+        </div>
+        <div id="qrcode-container" style="display: none;">
+            <div id="qrcode"></div>
+            <p class="message">请使用微信扫描二维码关注</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="{{ url_for('static', filename='admin.js') }}"></script>
+</body>
+</html> 
